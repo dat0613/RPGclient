@@ -4,9 +4,11 @@ ScriptsOnlyBuild:
     - AttackRangeCollider
     - FollowCamera
     - IOcomponent
+    - Launcher
     - LogText
+    - MinNetAnimator
+    - MinNetTransform
     - PlayerController
-    - PositionSync
     MinNetforUnity.dll:
     - MinNetforUnity.MinNetView
     UnityEditor.Graphs.dll:
@@ -15,7 +17,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateMachineBehaviourEditor
     - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
@@ -74,13 +75,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9880}
     - Class: 114
+      Script: {instanceID: 10160}
+    - Class: 114
       Script: {instanceID: 10252}
     - Class: 114
-      Script: {instanceID: 10568}
+      Script: {instanceID: 10618}
     - Class: 114
-      Script: {instanceID: 15912}
+      Script: {instanceID: 10746}
     - Class: 114
-      Script: {instanceID: 35882}
+      Script: {instanceID: 16168}
+    - Class: 114
+      Script: {instanceID: 16660}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -754,7 +759,7 @@ ScriptsOnlyBuild:
     className: SignalReceiver
   - hash:
       serializedVersion: 2
-      Hash: 95128a79dc150a9a7c3ee63cf9b42722
+      Hash: 1b0968a4e5f4b9b4d5d378de8a84c436
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -844,10 +849,10 @@ ScriptsOnlyBuild:
     className: AudioTrack
   - hash:
       serializedVersion: 2
-      Hash: cfd757c20c8919fedba6c907f724700e
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: PositionSync
+    className: AttackRangeCollider
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -898,6 +903,12 @@ ScriptsOnlyBuild:
     className: ChattingWindow
   - hash:
       serializedVersion: 2
+      Hash: 244ce7665f5c897c473d074a963109d4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FollowCamera
+  - hash:
+      serializedVersion: 2
       Hash: 8649814970b42d345b89944b862453cc
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -928,22 +939,16 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 244ce7665f5c897c473d074a963109d4
+      Hash: d1f9ca8b8004bdfe56b7609d472b2e70
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: FollowCamera
+    className: MinNetAnimator
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 3761f0f913d21de312fae34afdc87eb0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: AttackRangeCollider
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: aasdfasedf
+    className: MinNetTransform
   platform: 19
   scenePathNames:
   - Assets/Scenes/ScriptTestScene.unity

@@ -15,7 +15,9 @@ public class Launcher : MonoBehaviourMinNetCallBack
     /// </summary>
     void Awake()
     {
-        MinNetDebug.FindContent();
+        // MinNetDebug.FindContent();
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 60;
     }
 
     void Start()

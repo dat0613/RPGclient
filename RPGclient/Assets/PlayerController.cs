@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviourMinNet
     [SerializeField]
     CharacterController controller;
     [SerializeField]
-    Animator animator;
+    MinNetAnimator animator;
     [SerializeField]
     AttackRangeCollider attackRange;
     [SerializeField]
@@ -27,9 +27,17 @@ public class PlayerController : MonoBehaviourMinNet
         controller = controller ?? GetComponent<CharacterController>();
     }
 
+    public override void OnSetID(int objectID)
+    {
+        if(isMine)
+        {
+            FollowCamera.Instance.targetObject = gameObject;
+        }
+    }
+
     void FixedUpdate()
     {
-        // if(isMine)
+        if(isMine)
         {
             PlayerInput();
         }
@@ -136,5 +144,10 @@ public class PlayerController : MonoBehaviourMinNet
     public void Attack()
     {
         // var objectList = attackRange.GetGameObjectInCollider().;
+    }
+
+    public void Foot()
+    {
+        
     }
 }
