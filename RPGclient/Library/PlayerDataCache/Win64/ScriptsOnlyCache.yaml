@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     - IOcomponent
     - Launcher
     - LogText
+    - MapGenerator
     - MinNetAnimator
     - MinNetTransform
     - PlayerController
@@ -22,7 +23,11 @@ ScriptsOnlyBuild:
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.ContentSizeFitter
+    - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/ScriptTestScene.unity:
@@ -44,8 +49,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 64
-      Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
     - Class: 74
@@ -65,27 +68,37 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 9404}
+    - Class: 114
       Script: {instanceID: 9454}
+    - Class: 114
+      Script: {instanceID: 9456}
+    - Class: 114
+      Script: {instanceID: 9460}
+    - Class: 114
+      Script: {instanceID: 9466}
     - Class: 114
       Script: {instanceID: 9510}
     - Class: 114
-      Script: {instanceID: 9564}
+      Script: {instanceID: 9512}
     - Class: 114
-      Script: {instanceID: 9778}
+      Script: {instanceID: 9566}
     - Class: 114
-      Script: {instanceID: 9880}
+      Script: {instanceID: 9780}
     - Class: 114
-      Script: {instanceID: 10160}
+      Script: {instanceID: 9882}
     - Class: 114
-      Script: {instanceID: 10252}
+      Script: {instanceID: 10162}
     - Class: 114
-      Script: {instanceID: 10618}
+      Script: {instanceID: 10254}
     - Class: 114
-      Script: {instanceID: 10746}
+      Script: {instanceID: 10272}
     - Class: 114
-      Script: {instanceID: 16168}
+      Script: {instanceID: 10620}
     - Class: 114
-      Script: {instanceID: 16660}
+      Script: {instanceID: 10748}
+    - Class: 114
+      Script: {instanceID: 14712}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -96,7 +109,13 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
+      Script: {instanceID: 0}
     - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
@@ -145,6 +164,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ActivationTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 3761f0f913d21de312fae34afdc87eb0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MinNetTransform
   - hash:
       serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
@@ -771,6 +796,12 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
+      Hash: d1f9ca8b8004bdfe56b7609d472b2e70
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MinNetAnimator
+  - hash:
+      serializedVersion: 2
       Hash: e1300922cc039f41ab46a47f4cb05898
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -939,16 +970,10 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: d1f9ca8b8004bdfe56b7609d472b2e70
+      Hash: 2533cf472e8deebcfce4ce9c8b50b83b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: MinNetAnimator
-  - hash:
-      serializedVersion: 2
-      Hash: 3761f0f913d21de312fae34afdc87eb0
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MinNetTransform
+    className: MapGenerator
   platform: 19
   scenePathNames:
   - Assets/Scenes/ScriptTestScene.unity

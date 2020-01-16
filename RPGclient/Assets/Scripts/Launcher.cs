@@ -27,12 +27,21 @@ public class Launcher : MonoBehaviourMinNetCallBack
         // MinNetUser.ConnectToServer("34.97.67.118", 8200, 8201);
     }
 
+    /// <summary>
+    /// Update is called every frame, if the MonoBehaviour is enabled.
+    /// </summary>
+    void Update()
+    {
+        text.text = MinNetUser.ServerTime.ToString() + " : " + MinNetUser.Ping;
+        // Debug.Log(MinNetUser.ServerTime);
+    }
+
     public override void UserEnterRoom(int roomNumber, string roomName)
     {
         if(roomName == "Main")
         {
             Debug.Log("Main 룸에 입장");
-            MinNetUser.Instantiate(prefab);
+            MinNetUser.Instantiate(prefab, new Vector3(0.0f, 5.0f, 0.0f), Quaternion.identity);
             //text.text = MinNetUser.RemoteEndpoint.Address.ToString() + " : " + MinNetUser.RemoteEndpoint.Port.ToString();
         }
     }

@@ -30,7 +30,7 @@ public class MinNetTransform : MonoBehaviourMinNet
             }
             else
             {
-                return  syncTimeSum / syncCount;
+                return syncTimeSum / syncCount;
             }
         }
     }
