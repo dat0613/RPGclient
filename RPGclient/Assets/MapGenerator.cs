@@ -18,7 +18,7 @@ public class MapGenerator : MonoBehaviour
     public float multiple = 1.0f;
     const int xSize = 20;
     const int ySize = 20;
-
+    GameObject tileMapParent = null;
 
     public List<GameObject> tilePrefabList;
 
@@ -88,6 +88,10 @@ public class MapGenerator : MonoBehaviour
 
         var tileObject = Instantiate(prefab, new Vector3((float)x - (float)xSize * 0.5f, 0.0f, (float)y - (float)ySize * 0.5f) * multiple, Quaternion.identity);
         tileObject.transform.localScale = new Vector3(multiple, multiple, multiple);
+        tileObject.gameObject.isStatic = true;
+
+        if(tileMapParent != null)
+            tileObject.transform.SetParent(tileMapParent.transform);
 
         if(tile != Tile.WayPoint)
             return;
@@ -102,6 +106,9 @@ public class MapGenerator : MonoBehaviour
 
     void Awake()
     {
+        tileMapParent = tileMapParent ?? new GameObject("TileMapParent");
+        tileMapParent.gameObject.isStatic = true;
+        
         for(int y = 0; y < ySize; y++)
         {
             for(int x = 0; x < xSize; x++)
