@@ -32,7 +32,7 @@ public class Launcher : MonoBehaviourMinNetCallBack
     /// </summary>
     void Update()
     {
-        text.text = MinNetUser.ServerTime.ToString() + " : " + MinNetUser.Ping;
+        // text.text = MinNetUser.ServerTime.ToString() + " : " + MinNetUser.Ping;
         // Debug.Log(MinNetUser.ServerTime);
     }
 
@@ -41,7 +41,7 @@ public class Launcher : MonoBehaviourMinNetCallBack
         if(roomName == "Main")
         {
             Debug.Log("Main 룸에 입장");
-            MinNetUser.Instantiate(prefab, new Vector3(0.0f, 5.0f, 0.0f), Quaternion.identity);
+            MinNetUser.Instantiate(prefab, new Vector3(69.0f, 24.0f, 42.0f), Quaternion.identity);
             //text.text = MinNetUser.RemoteEndpoint.Address.ToString() + " : " + MinNetUser.RemoteEndpoint.Port.ToString();
         }
     }
